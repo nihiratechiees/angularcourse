@@ -1,0 +1,58 @@
+<h1>If Example</h1>
+
+@if(isloggedIn){
+<div>Welcome User</div>
+}@else {
+<div>Please loggin!</div>
+}
+
+@if(color==='red'){
+<div style="background-color: red;">Welcome User</div>
+}@else if(color==='green') {
+<div style="background-color: green;">Welcome User</div>
+}@else {
+<div style="background-color: yellow;">Welcome User</div>
+}
+
+<h1>For Example</h1>
+<select>
+    @for(item of countries; track item){
+    <option value="{{item}}">{{item}}</option>
+    }
+
+</select>
+
+<table>
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(item of emplist;track item.code){
+        <tr>
+            <td>{{item.code}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.salary}}</td>
+        </tr>
+        }
+
+
+    </tbody>
+</table>
+
+<h1>Switch Example</h1>
+
+@switch ((userrole)) {
+@case ('admin') {
+<div>Welcome Admin user!</div>
+}
+@case ('user') {
+<div>Welcome LoggedIn user!</div>
+}
+@default {
+<div>Welcome!</div>
+}
+}
