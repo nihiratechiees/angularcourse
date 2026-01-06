@@ -1,0 +1,31 @@
+{
+  "employees": [
+    {
+      "id": "15e7",
+      "firstname": "Ravikumar",
+      "lastname": "wilson",
+      "email": "ab1@in.com",
+      "phoneno": "799999",
+      "address": "1st street",
+      "iscontract": true
+    },
+    {
+      "id": "5443",
+      "firstname": "nihira",
+      "lastname": "techiees",
+      "email": "nt@in.com",
+      "phoneno": "678899900",
+      "address": "1st street\nRK Nager",
+      "iscontract": false
+    },
+    {
+      "id": "5444",
+      "firstname": "nihira",
+      "lastname": "techiees",
+      "email": "nihiratechiees@gmail.com",
+      "phoneno": "6788999002",
+      "address": "1st street\nRK Nager\nChennai",
+      "iscontract": true
+    }
+  ]
+}

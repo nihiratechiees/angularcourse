@@ -1,0 +1,52 @@
+<div class="form-container">
+    <h1>{{title()}}</h1>
+<form (submit)="Saveemployee($event)">
+    <label for="firstname">First Name:</label>
+    <input type="text" id="firstname"  [field]="empForm.firstname" >
+    @if(empForm.firstname().touched() && empForm.firstname().invalid()) {
+        <ul class="errormessage">
+            @for(error of empForm.firstname().errors();track error) {
+                <li>{{error.message}}</li>
+            }
+        </ul>
+    }
+
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="lastname" [field]="empForm.lastname" >
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" [field]="empForm.email" >
+     @if(empForm.email().touched() && empForm.email().invalid()) {
+        <ul class="errormessage">
+            @for(error of empForm.email().errors();track error) {
+                <li>{{error.message}}</li>
+            }
+        </ul>
+    }
+
+    <label for="phoneno">Phone:</label>
+    <input type="text" id="phoneno" [field]="empForm.phoneno" >
+     @if(empForm.phoneno().touched() && empForm.phoneno().invalid()) {
+        <ul class="errormessage">
+            @for(error of empForm.phoneno().errors();track error) {
+                <li>{{error.message}}</li>
+            }
+        </ul>
+    }
+
+    <label for="address">Address:</label>
+    <textarea id="address" [field]="empForm.address"></textarea>
+     @if(empForm.address().touched() && empForm.address().invalid()) {
+        <ul class="errormessage">
+            @for(error of empForm.address().errors();track error) {
+                <li>{{error.message}}</li>
+            }
+        </ul>
+    }
+
+    <label>Is Contract</label>
+    <input type="checkbox" id="iscontract" [field]="empForm.iscontract">
+
+    <button type="submit" [disabled]="empForm().invalid()" >Save</button>
+</form>
+</div>

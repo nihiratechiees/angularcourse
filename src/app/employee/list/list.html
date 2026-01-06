@@ -1,0 +1,36 @@
+<div class="form-container">
+    <h1>Add Employee</h1>
+    <button style="width: 15%;" class="btn-primary" (click)="navigateToAdd()">Add New Employee</button>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone No</th>
+                <th>Address</th>
+                <th>Is Contract</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (emp of emplist(); track emp.id) {
+                <tr>
+                    <td>{{emp.firstname}}</td>
+                    <td>{{emp.lastname}}</td>
+                    <td>{{emp.email}}</td>
+                    <td>{{emp.phoneno}}</td>
+                    <td>{{emp.address}}</td>
+                    <td>{{emp.iscontract ? 'Yes' : 'No'}}</td>
+                    <td>
+                        <div class="btn-container">
+                            <button class="btn-info" (click)="editEmployee(emp.id)">Edit</button>
+                            <button class="btn-danger" (click)="deleteEmployee(emp.id)">Delete</button>
+                            
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
