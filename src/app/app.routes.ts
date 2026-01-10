@@ -4,6 +4,7 @@ import { Controlflowx } from './controlflowx/controlflowx';
 import { Signalformx } from './signalformx/signalformx';
 import { Add } from './employee/add/add';
 import { List } from './employee/list/list';
+import { Materialuix } from './materialuix/materialuix';
 
 export const routes: Routes = [
     {
@@ -23,5 +24,8 @@ export const routes: Routes = [
     },
     {
         path:'editemployee/:id',component:Add
+    },
+    {
+        path:'material',component:Materialuix
     }
 ];
